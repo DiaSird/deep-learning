@@ -1,5 +1,6 @@
 run:
 		poetry run python ./src/run.py
+		poetry run python ./src/simpl_pcept.py
 
 install:
 		poetry install --no-interaction
