@@ -3,6 +3,9 @@
     "ms-python.python",
     "ms-python.vscode-pylance",
     "njqdev.vscode-python-typehint",
-    "spmeesseman.vscode-taskexplorer"
+    "spmeesseman.vscode-taskexplorer",
+    "aaron-bond.better-comments",
+    "bungcip.better-toml",
+    "tamasfe.even-better-toml"
   ]
 }
