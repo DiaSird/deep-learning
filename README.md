@@ -1,10 +1,10 @@
-# Python template
+# Deep Learning used Python template
 
 ## Table of Contents
 
 <!-- TOC depthFrom:2 -->
 
-- [Python template](#python-template)
+- [Deep Learning used Python template](#deep-learning-used-python-template)
   - [Table of Contents](#table-of-contents)
   - [Requirements](#requirements)
   - [Make usage](#make-usage)
