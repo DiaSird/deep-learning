@@ -1,0 +1,51 @@
+# Workflow name
+name: Lint & Test
+
+# Trigger setting
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  POETRY_VERSION: 1.1.10
+  POETRY_URL: https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py
+
+jobs:
+  build:
+    name: Lint & Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+
+    steps:
+      # See: https://github.com/actions/checkout
+      - uses: actions/checkout@v2
+
+      # See: https://github.com/actions/setup-python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Enter the virtual environment
+        run: poetry env use ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: poetry install --no-interaction
+
+      - name: Lint with flake8
+        run: make lint
+
+      - name: Test with pytest
+        run: make test
+
+      # - name: Build
+      #   run: make build

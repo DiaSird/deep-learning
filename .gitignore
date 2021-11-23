@@ -1,0 +1,49 @@
+# ------------------------------------------------------------------------------------------------------------------------------
+# Temp Files
+# ------------------------------------------------------------------------------------------------------------------------------
+# Generated temporary files by OS or editors.
+*~
+*#
+*.bak
+*.tmproj
+.buildpath
+.project
+.settings
+.idea
+.tmp
+.netbeans
+nbproject
+logs
+lib
+__pycache__
+build
+*spec
+
+# ------------------------------------------------------------------------------------------------------------------------------
+# Dynamicaly Generated Files
+# ------------------------------------------------------------------------------------------------------------------------------
+# Hidden files created by OS.
+Thumbs.db
+desktop.ini
+.DS_Store
+.DS_STORE
+
+# Generated files created by Node.js.
+node_modules
+npm-debug.log
+
+# Generated files created by tests.
+coverage
+
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json

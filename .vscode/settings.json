@@ -1,0 +1,65 @@
+{
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Editor
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Inserts snippets when their prefix matches.
+  // Works best when 'quickSuggestions' aren't enabled.
+  "editor.tabCompletion": "on",
+  // Columns at which to show vertical rulers.
+  "editor.rulers": [100],
+
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Files
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Configures glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.idea": true
+  },
+
+  // Configures glob patterns of file paths to exclude from file watching.
+  // Changing this setting requires a restart. When you experience Code consuming
+  // lots of cpu time on startup, you can exclude large folders to reduce the initial load.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/__pycache__": true,
+    "**/.idea": true
+  },
+
+  "files.associations": {
+    ".env": "dotenv",
+    ".envpath": "shellscript",
+    ".eslintignore": "gitignore",
+    ".gitignore": "ignore",
+    "*.html": "html",
+    "*.json": "jsonc",
+    "*.md": "markdown",
+    "*.txt": "txt",
+    "*.spec": "python"
+  },
+
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Language Setings
+  // ---------------------------------------------------------------------------------------------------------------------------
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": false,
+    "editor.tabSize": 4
+  },
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Lint, Format Setings
+  // ---------------------------------------------------------------------------------------------------------------------------
+  "python.formatting.autopep8Args": ["--aggressive", "--aggressive"],
+  "python.formatting.provider": "autopep8",
+  "python.languageServer": "Default",
+  "python.linting.flake8Args": [
+    "--ignore=W293, W504",
+    "--max-line-length=150",
+    "--max-complexity=20"
+  ],
+  "python.linting.flake8Enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "${workspaceRoot}/.venv/bin/python",
+}
