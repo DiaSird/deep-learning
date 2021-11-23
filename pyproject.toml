@@ -2,7 +2,7 @@
 name = "python-template"
 version = "0.1.0"
 description = "python template"
-authors = ["SARDONYX-sard <68905624+SARDONYX-sard@users.noreply.github.com>"]
+authors = ["example <example.example@example.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
