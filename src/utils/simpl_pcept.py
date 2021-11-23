@@ -8,16 +8,20 @@ References:
 """
 
 
+from typing import List
+
+
 class Perceptron:
-    def __init__(self, select: int, x: list[int]):
+    def __init__(self, select: int, x: List[int]):
         """
         Output monitor and define select number
         """
         self.select = select
         self.x = x
 
-    def selection(self):
+    def __selection(self):
         """
+        ## Private method (use only in class)
         Define weight w and bias b
         """
         # AND gate
@@ -36,18 +40,16 @@ class Perceptron:
             b = 0.2
             return w1, w2, b
         else:
-            print("Stop. You selected wrong number.")
-            print("")
-            exit()
+            raise ValueError("Stop. You selected wrong number.")
 
     def calculation(self):
         """
         Calculation perceptron
         """
         if self.x in [[0, 0], [0, 1], [1, 0], [1, 1]]:
-            w1, w2, b = self.selection()
+            w1, w2, b = self.__selection()
             [x1, x2] = self.x
-            temp = x1 * w1 + x2 * w2 + b
+            temp = int(x1 * w1 + x2 * w2 + b)
 
             if temp <= 0:
                 return 0, temp
@@ -55,9 +57,7 @@ class Perceptron:
                 return 1, temp
         else:
             print("x = ", self.x)
-            print("Stop. You selected wrong number.")
-            print("")
-            exit()
+            raise ValueError("Stop. You selected wrong number.")
 
 
 def main():
@@ -76,7 +76,7 @@ def main():
     x = [x1, x2]
 
     P = Perceptron(select, x)
-    y, temp = P.selection()
+    y, temp = P.calculation()
 
     print("")
     print("            ============== output ==============")
