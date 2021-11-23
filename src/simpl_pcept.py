@@ -9,36 +9,29 @@ References:
 
 
 class Perceptron:
-    def __init__(self):
+    def __init__(self, select: int, x: list[int]):
         """
         Output monitor and define select number
         """
-        print("")
-        print("--------------------------------------------------------------")
-        print("                       Simple Perceptron                      ")
-        print("--------------------------------------------------------------")
-        print("")
-        self.select = int(input("Select number (AND = 1, NAND = 2, OR = 3): "))
-        print("")
-        print("You selected number", self.select, ".")
-        print("")
+        self.select = select
+        self.x = x
 
-    def selection(self, select):
+    def selection(self):
         """
         Define weight w and bias b
         """
         # AND gate
-        if select == 1:
+        if self.select == 1:
             w1, w2 = 0.5, 0.5
             b = 0.7
             return w1, w2, b
         # NAND gate
-        elif select == 2:
+        elif self.select == 2:
             w1, w2 = -0.5, -0.5
             b = 0.7
             return w1, w2, b
         # OR gate
-        elif select == 3:
+        elif self.select == 3:
             w1, w2 = 0.5, 0.5
             b = 0.2
             return w1, w2, b
@@ -47,45 +40,51 @@ class Perceptron:
             print("")
             exit()
 
-    def calculation(self, x, select):
+    def calculation(self):
         """
         Calculation perceptron
         """
-        if (x == [0, 0]) or (x == [0, 1]) or (x == [1, 0]) or (x == [1, 1]):
-            w1, w2, b = self.selection(self.select)
-
+        if self.x in [[0, 0], [0, 1], [1, 0], [1, 1]]:
+            w1, w2, b = self.selection()
+            [x1, x2] = self.x
             temp = x1 * w1 + x2 * w2 + b
 
             if temp <= 0:
                 return 0, temp
-            elif temp > 0:
+            else:
                 return 1, temp
         else:
-            print("x = ", x)
+            print("x = ", self.x)
             print("Stop. You selected wrong number.")
             print("")
             exit()
 
-    def output(self, select):
-        """
-        Output y
-        """
-        y, temp = self.calculation(x, select)
-        print("")
-        print("            ============== output ==============")
-        print("                      x * w + b =", temp)
-        print("                              y =", y)
-        print("")
 
-
-# --- Main calculation part ---
-if __name__ == "__main__":
-    P = Perceptron()
-    select = P.select
-    check = P.selection(P.select)
+def main():
+    print("")
+    print("--------------------------------------------------------------")
+    print("                       Simple Perceptron                      ")
+    print("--------------------------------------------------------------")
+    print("")
+    select = int(input("Select number (AND = 1, NAND = 2, OR = 3): "))
+    print("")
+    print("You selected number", select, ".")
+    print("")
 
     x1 = int(input("Choose number x1: (0 or 1) "))
     x2 = int(input("Choose number x2: (0 or 1) "))
     x = [x1, x2]
 
-    P.output(select)
+    P = Perceptron(select, x)
+    y, temp = P.selection()
+
+    print("")
+    print("            ============== output ==============")
+    print("                      x * w + b =", temp)
+    print("                              y =", y)
+    print("")
+
+
+# --- Main calculation part ---
+if __name__ == "__main__":
+    main()
