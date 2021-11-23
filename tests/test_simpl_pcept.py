@@ -7,16 +7,16 @@ class TestPerceptron(unittest.TestCase):
 
     def test_and(self):
         self.__test_util(1, [1, 1], 1, 1)
-        self.__test_util(1, [0, 1], 1, 1)  # ? The results are wrong.
+        self.__test_util(1, [0, 1], 1, 0)  # ! Test Error
 
     def test_nand(self):
         self.__test_util(2, [1, 1], 0, 0)
-        self.__test_util(2, [0, 0], 0, 0)  # ? The results are wrong.
+        self.__test_util(2, [0, 0], 0, 1)  # ! Test Error
 
     def test_or(self):
         self.__test_util(3, [0, 0], 0, 0)
-        self.__test_util(3, [0, 1], 0, 0)
-        self.__test_util(3, [1, 0], 0, 0)
+        self.__test_util(3, [0, 1], 0, 1)  # ! Test Error
+        self.__test_util(3, [1, 0], 0, 1)  # ! Test Error
 
     def __test_util(
             self,
