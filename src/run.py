@@ -1,4 +1,4 @@
-from utils.operator import add
+from utils.simpl_pcept import main
 
 if __name__ == "__main__":
-    print(add(1, 2))
+    main()
