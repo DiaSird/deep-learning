@@ -1,6 +1,7 @@
 run:
 		poetry run python ./src/run.py
 		poetry run python ./src/simpl_pcept.py
+		poetry run python ./src/3_neural.py
 
 install:
 		poetry install --no-interaction
