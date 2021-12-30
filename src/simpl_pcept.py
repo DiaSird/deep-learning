@@ -76,7 +76,7 @@ class Perceptron:
         print("                      x * w + b =", temp)
         print("                              y =", y)
         print("")
-
+    
 
 # --- Main calculation part ---
 if __name__ == "__main__":
