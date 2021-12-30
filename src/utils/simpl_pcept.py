@@ -29,11 +29,13 @@ class Perceptron:
             w1, w2 = 0.5, 0.5
             b = 0.7
             return w1, w2, b
+
         # NAND gate
         elif self.select == 2:
             w1, w2 = -0.5, -0.5
             b = 0.7
             return w1, w2, b
+
         # OR gate
         elif self.select == 3:
             w1, w2 = 0.5, 0.5

@@ -36,6 +36,7 @@ More info is [here.](https://raw.githubusercontent.com/python-poetry/poetry/mast
 | :--------------- | :------------------------------------: |
 | `make run`       | Run python file(default: `src/run.py`) |
 | `make run-simpl` | Run python file(`src/simple_percept.py`) |
+| `make run-neu3`  | Run python file(`src/neural3.py`) |
 | `make run-sigm`  | Run python file(`src/stepsig.py`) |
 | `make install`   |    Install dependencies (by poetry)    |
 | `make test`      |            Test with pytest            |

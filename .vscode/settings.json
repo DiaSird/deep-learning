@@ -7,6 +7,9 @@
   "editor.tabCompletion": "on",
   // Columns at which to show vertical rulers.
   "editor.rulers": [100],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
 
   // ---------------------------------------------------------------------------------------------------------------------------
   // Files
@@ -38,6 +41,9 @@
     "*.spec": "python"
   },
 
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
   // ---------------------------------------------------------------------------------------------------------------------------
   // Language Setings
   // ---------------------------------------------------------------------------------------------------------------------------
@@ -62,5 +68,5 @@
   "python.linting.pycodestyleEnabled": false,
   "python.linting.pylintEnabled": false,
   "python.pythonPath": "${workspaceRoot}/.venv/bin/python",
-  "cSpell.words": ["NAND", "pcept"]
+  "cSpell.words": ["NAND", "pcept", "nand"]
 }
