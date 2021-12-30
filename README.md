@@ -32,13 +32,15 @@ More info is [here.](https://raw.githubusercontent.com/python-poetry/poetry/mast
 
 ## Make usage
 
-| Command        |               Description              |
-| :------------- | :------------------------------------: |
-| `make run`     | Run python file(default: `src/run.py`) |
-| `make install` |    Install dependencies (by poetry)    |
-| `make test`    |            Test with pytest            |
-| `make lint`    |            Lint with flake8            |
-| `make clean`   |       Remove `__pycache__` files       |
+| Command          |              Description               |
+| :--------------- | :------------------------------------: |
+| `make run`       | Run python file(default: `src/run.py`) |
+| `make run-simpl` | Run python file(`src/simple_percept.py`) |
+| `make run-sigm`  | Run python file(`src/stepsig.py`) |
+| `make install`   |    Install dependencies (by poetry)    |
+| `make test`      |            Test with pytest            |
+| `make lint`      |            Lint with flake8            |
+| `make clean`     |       Remove `__pycache__` files       |
 
 If you are using windows, you can install the `make` command [here](http://gnuwin32.sourceforge.net/packages/make.htm).
 (Click the `Setup` button at the top.)

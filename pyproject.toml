@@ -2,11 +2,13 @@
 name = "python-template"
 version = "0.1.0"
 description = "python template"
-authors = ["SARDONYX-sard <68905624+SARDONYX-sard@users.noreply.github.com>"]
+authors = ["exaple@example.github.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.7 <3.9"
+numpy = "^1.21.5"
+matplotlib = "^3.5.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"

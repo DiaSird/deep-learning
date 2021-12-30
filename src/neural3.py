@@ -8,12 +8,12 @@ References:
 import numpy as np
 
 
-def sigmoid(x):
+def sigmoid(x: float):
     # sigmoid function y = 1 / (1 + exp(-x))
     return 1 / (1 + np.exp(-x))
 
 
-def identity_function(x):
+def identity_function(x: float):
     # identify function y = x
     return x
 
@@ -35,7 +35,7 @@ def init_network():
     return network
 
 
-def forward(network, x):
+def forward(network, x: float):
     '''
     "forward" is transmission processing from input to output
     '''

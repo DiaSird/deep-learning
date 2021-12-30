@@ -1,10 +1,23 @@
+default: run
+
 run:
 		poetry run python ./src/run.py
+
+run-simpl:
 		poetry run python ./src/simpl_pcept.py
-		poetry run python ./src/3_neural.py
+
+run-neu3:
+		poetry run python ./src/neural3.py
+
+run-sigm:
+		poetry run python ./src/stepsig.py
+
+install-dev:
+		poetry install
 
 install:
 		poetry install --no-interaction
+
 
 lint:
     # stop the build if there are Python syntax errors or undefined names
