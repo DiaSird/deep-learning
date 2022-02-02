@@ -68,5 +68,10 @@
   "python.linting.pycodestyleEnabled": false,
   "python.linting.pylintEnabled": false,
   "python.pythonPath": "${workspaceRoot}/.venv/bin/python",
-  "cSpell.words": ["NAND", "pcept", "nand"]
+  "cSpell.words": [
+    "imshow",
+    "nand",
+    "NAND",
+    "pcept"
+  ]
 }
