@@ -1,3 +1,0 @@
-# Getting Ready
-
-## Perceptron

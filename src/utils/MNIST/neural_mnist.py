@@ -65,7 +65,7 @@ if __name__ == '__main__':
     dset = stm.dataset['train_label']
     key = 'train_img'
 
-    # stm.graph(stm.i)
+    stm.graph(stm.i)
     # one hot form
     hot = stm.to_one_hot(dset)
     # normalize

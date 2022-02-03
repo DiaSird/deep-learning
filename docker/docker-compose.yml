@@ -1,0 +1,14 @@
+
+# https://dev.classmethod.jp/articles/add-vs-code-remote-development-settings-to-existing-docker-environment/
+
+version: "3.7"
+services:
+  # Arbitary survice name
+  python-env:
+    build:
+      dockerfile: ./Dockerfile
+    restart: always
+    tty: true
+    volumes:
+      - ./:/home/user/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
