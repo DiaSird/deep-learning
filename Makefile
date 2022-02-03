@@ -1,5 +1,12 @@
 default: run
 
+# ------------------------------------------------------------------------------------------------------
+# Docker
+dk-run:
+		docker run -it -v deep-learning:/home/user/code deeplearning:latest
+
+# ------------------------------------------------------------------------------------------------------
+
 run:
 		poetry run python ./src/run.py
 
@@ -11,6 +18,11 @@ run-neu3:
 
 run-sigm:
 		poetry run python ./src/stepsig.py
+
+run-mnist:
+		# poetry run python ./src/utils/MNIST/set_mnist.py
+		poetry run python ./src/utils/MNIST/neural_mnist.py
+install-dev:
 
 install-dev:
 		poetry install

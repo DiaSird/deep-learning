@@ -12,6 +12,7 @@
 .idea
 .tmp
 .netbeans
+.vscode
 nbproject
 logs
 lib
